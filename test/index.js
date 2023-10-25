@@ -4,6 +4,7 @@
  * IMPORTS
  ***************************************************************************/
 
+var RE2                = require("re2");
 var fs                 = require("fs");
 var EmailForwardParser = require("../lib/index.js");
 
@@ -28,7 +29,7 @@ const CC_NAME_1 = "Walter Sheltan";
 const CC_ADDRESS_2 = "nicholas@globex.corp";
 const CC_NAME_2 = "Nicholas";
 
-const parser = new EmailForwardParser();
+const parser = new EmailForwardParser(RE2);
 
 /**************************************************************************
  * TESTS
